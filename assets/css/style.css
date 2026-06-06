@@ -80,7 +80,7 @@ img { max-width: 100%; display: block; }
   color: #fff; overflow: hidden; min-height: 610px; display: grid; align-items: center;
   background:
     linear-gradient(90deg, rgba(7,30,55,.96), rgba(18,60,105,.76) 58%, rgba(18,60,105,.35)),
-    url("../img/hero-arsitektur.svg") center/cover no-repeat;
+    url("../img/UMRAH-Sketch-scaled.jpg") center/cover no-repeat;
 }
 .hero-content { padding: 84px 0; max-width: 790px; }
 .hero-kicker { display: inline-flex; padding: 6px 12px; border: 1px solid rgba(255,255,255,.34); border-radius: 999px; background: rgba(255,255,255,.10); font-size: .8rem; font-weight: 700; }
