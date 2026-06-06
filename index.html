@@ -1,28 +1,257 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Arsitektur UMRAH</title>
-<meta name="description" content="Prototype website Program Studi Arsitektur FTTK UMRAH">
-<style>
-:root{--navy:#0b2746;--blue:#123c69;--gold:#f0a500;--soft:#f5f8fb;--line:#d9e2ec;--text:#243447;--muted:#667085}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;color:var(--text);line-height:1.6}a{text-decoration:none;color:inherit}.wrap{width:min(1160px,calc(100% - 32px));margin:auto}.top{background:var(--navy);color:#dce9f6;font-size:13px;padding:8px 0}.top .wrap,.nav,.hero-actions,.cards,.quick,.stats,.footer-grid{display:flex;gap:18px}.top .wrap{justify-content:space-between}.header{position:sticky;top:0;background:#fff;z-index:10;box-shadow:0 3px 14px #00000014}.nav{align-items:center;min-height:76px}.brand{font-weight:800;color:var(--navy);min-width:250px}.brand small{display:block;color:var(--muted);font-weight:400}.menu{display:flex;gap:8px;margin-left:auto;list-style:none;padding:0}.menu li{position:relative}.menu>a,.menu li>a{display:block;padding:27px 8px;font-size:14px;font-weight:700}.drop{display:none;position:absolute;top:72px;left:0;min-width:220px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px;list-style:none;box-shadow:0 10px 24px #123c6924}.drop a{padding:8px!important;font-weight:500!important}.menu li:hover .drop{display:block}.hero{min-height:560px;color:#fff;display:grid;align-items:center;background:linear-gradient(90deg,#071e37f2,#123c69bd),linear-gradient(145deg,#315b7e,#7b9ab3)}.hero h1{font-size:clamp(44px,7vw,78px);line-height:1;margin:12px 0}.hero p{max-width:700px;color:#eef5fc}.tag{display:inline-block;border:1px solid #ffffff55;padding:5px 11px;border-radius:30px;font-size:13px}.btn{display:inline-block;background:var(--gold);padding:11px 16px;border-radius:30px;font-weight:800}.outline{background:transparent;color:#fff;border:1px solid #ffffff88}.quick{margin-top:-40px;position:relative;z-index:2}.quick a{flex:1;background:#fff;padding:20px;border:1px solid var(--line);box-shadow:0 10px 22px #123c691c}.quick strong{display:block;color:var(--navy)}section{padding:70px 0}.soft{background:var(--soft)}h2{color:var(--navy);font-size:34px;line-height:1.2;margin:6px 0 12px}.lead{max-width:760px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);margin-top:24px}.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}.card h3{margin:4px 0;color:var(--navy)}.card p{margin:0;color:var(--muted);font-size:14px}.notice{border-left:4px solid var(--gold);background:#fff7df;padding:13px 15px;border-radius:8px;color:#68511c}.split{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.panel{background:var(--navy);color:#fff;padding:22px;border-radius:14px}.stats{justify-content:space-between;background:var(--navy);color:#fff;padding:28px;border-radius:14px}.stats div{text-align:center;flex:1}.stats strong{display:block;font-size:34px}.placeholder{background:#fff1c7;color:#775b00;padding:2px 5px;border-radius:4px}.photo{min-height:240px;border:2px dashed #9ab2c9;border-radius:14px;display:grid;place-items:center;text-align:center;color:var(--blue);background:#fff}.footer{background:#071e37;color:#dbe8f3;padding:45px 0 18px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px}.footer h3{color:#fff;margin-top:0}.footer a{display:block;color:#dbe8f3;padding:3px 0;font-size:14px}.copy{border-top:1px solid #ffffff24;margin-top:28px;padding-top:13px;font-size:13px}.toggle{display:none;margin-left:auto;font-size:25px;background:none;border:0}@media(max-width:900px){.toggle{display:block}.menu{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:12px;box-shadow:0 10px 18px #0002}.menu.open{display:block}.menu li>a{padding:10px}.drop{position:static;box-shadow:none;border:0}.menu li:hover .drop{display:block}.quick,.split,.cards,.footer-grid{display:grid;grid-template-columns:1fr}.quick{gap:0}.top{display:none}.hero{min-height:500px}section{padding:54px 0}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Program Studi Arsitektur FTTK UMRAH</title>
+  <meta name="description" content="Prototype website Program Studi Arsitektur FTTK UMRAH">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<div class="top"><div class="wrap"><span>Program Studi Arsitektur · FTTK UMRAH</span><span>Email resmi · Instagram resmi</span></div></div>
-<header class="header"><div class="wrap nav"><a class="brand" href="#home">Arsitektur UMRAH<small>Fakultas Teknik dan Teknologi Kemaritiman</small></a><button class="toggle" aria-label="Buka menu">☰</button><ul class="menu"><li><a href="#home">Home</a></li><li><a href="#profil">Profil ▾</a><ul class="drop"><li><a href="#profil">Profil Program Studi</a></li><li><a href="#sambutan">Sekapur Sirih</a></li><li><a href="#profil">Visi, Misi & Tujuan</a></li></ul></li><li><a href="#akademik">Akademik ▾</a><ul class="drop"><li><a href="#akademik">Kurikulum</a></li><li><a href="#akademik">RPS</a></li><li><a href="#akademik">CPL</a></li></ul></li><li><a href="#berita">Informasi ▾</a><ul class="drop"><li><a href="#berita">Berita</a></li><li><a href="#pengumuman">Pengumuman</a></li></ul></li><li><a href="#fasilitas">Sumber Daya</a></li><li><a href="#footer">Layanan</a></li></ul></div></header>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div>Program Studi Arsitektur · Fakultas Teknik dan Teknologi Kemaritiman</div>
+    <div class="topbar-links">
+      <span>✉ <span class="placeholder">email resmi prodi</span></span>
+      <span>◎ <span class="placeholder">Instagram resmi</span></span>
+    </div>
+  </div>
+</div>
+
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html">
+      <div class="brand-mark">UMRAH</div>
+      <div class="brand-text">
+        <strong>Arsitektur UMRAH</strong>
+        <span>FTTK · Universitas Maritim Raja Ali Haji</span>
+      </div>
+    </a>
+    <button class="menu-toggle" aria-label="Buka navigasi" aria-expanded="false">☰</button>
+    <ul class="nav-menu">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Profil ▾</a>
+        <ul class="dropdown">
+          <li><a href="pages/profil-program-studi.html">Profil Program Studi</a></li>
+          <li><a href="pages/profil-program-studi.html#sambutan">Sekapur Sirih</a></li>
+          <li><a href="pages/profil-program-studi.html#sejarah">Sejarah</a></li>
+          <li><a href="pages/visi-misi.html">Visi, Misi & Tujuan</a></li>
+          <li><a href="pages/profil-program-studi.html#struktur">Struktur Organisasi</a></li>
+          <li><a href="pages/dosen.html">Dosen Arsitektur</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#">Akademik ▾</a>
+        <ul class="dropdown">
+          <li><a href="pages/kurikulum.html">Kurikulum</a></li>
+          <li><a href="pages/kurikulum.html#rps">RPS</a></li>
+          <li><a href="pages/kurikulum.html#profil-lulusan">Profil Lulusan</a></li>
+          <li><a href="pages/kurikulum.html#cpl">Capaian Pembelajaran Lulusan</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#">Mahasiswa & Alumni ▾</a>
+        <ul class="dropdown">
+          <li><a href="pages/prestasi.html">Prestasi Mahasiswa</a></li>
+          <li><a href="pages/prestasi.html#karya">Karya Mahasiswa</a></li>
+          <li><a href="pages/prestasi.html#alumni">Alumni</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#">Informasi ▾</a>
+        <ul class="dropdown">
+          <li><a href="pages/berita.html">Berita</a></li>
+          <li><a href="pages/pengumuman.html">Pengumuman</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#">Sumber Daya ▾</a>
+        <ul class="dropdown">
+          <li><a href="pages/fasilitas.html">Fasilitas & Studio</a></li>
+          <li><a href="pages/fasilitas.html#penelitian">Penelitian</a></li>
+          <li><a href="pages/fasilitas.html#pengabdian">Pengabdian Masyarakat</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#">Layanan ▾</a>
+        <ul class="dropdown">
+          <li><a href="pages/mbkm.html">Program MBKM</a></li>
+          <li><a href="pages/mbkm.html#kerja-praktik">Kerja Praktik</a></li>
+          <li><a href="pages/unduh.html">Unduh Berkas</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+
+
 <main>
-<section class="hero" id="home"><div class="wrap"><span class="tag">Program Studi S1 · FTTK UMRAH</span><h1>Merancang Ruang.<br>Membangun Masa Depan.</h1><p>Program Studi Arsitektur Universitas Maritim Raja Ali Haji hadir untuk mengembangkan calon arsitek yang peka terhadap ruang, budaya, lingkungan, dan karakter wilayah kepulauan.</p><div class="hero-actions"><a class="btn" href="#profil">Kenali Program Studi →</a><a class="btn outline" href="#akademik">Lihat Kurikulum</a></div></div></section>
-<div class="wrap quick"><a href="#profil"><strong>Profil Program Studi</strong>Kenali Arsitektur UMRAH</a><a href="#akademik"><strong>Kurikulum</strong>Struktur pembelajaran</a><a href="#fasilitas"><strong>Studio Arsitektur</strong>Fasilitas pembelajaran</a><a href="#berita"><strong>Berita Terbaru</strong>Kegiatan dan informasi</a></div>
-<section><div class="wrap split"><div><h2>Informasi PMB Arsitektur UMRAH</h2><p class="lead">Data daya tampung dan jalur seleksi akan diisi setelah diverifikasi oleh pihak program studi.</p><div class="notice">Seluruh angka masih berupa placeholder untuk keperluan prototype.</div></div><div class="panel"><h3>Daya Tampung Mahasiswa Baru</h3><p>Total mahasiswa: <b>00</b></p><p>SNBP & SNBT: <b>00</b></p><p>Seleksi mandiri: <b>00</b></p></div></div></section>
-<section class="soft" id="profil"><div class="wrap"><h2>Program Studi Arsitektur UMRAH</h2><p class="lead">Beranda memperkenalkan keunggulan prodi, pendekatan pembelajaran, konteks kepulauan, serta alasan calon mahasiswa memilih Arsitektur UMRAH.</p><div class="cards"><article class="card"><h3>Studio Berbasis Proyek</h3><p>Eksplorasi gagasan, perancangan, visualisasi, dan presentasi karya.</p></article><article class="card"><h3>Konteks Kepulauan</h3><p>Karakter desain yang responsif terhadap wilayah maritim dan budaya lokal.</p></article><article class="card"><h3>Karya Mahasiswa</h3><p>Etalase tugas studio, maket, poster, pameran, dan proyek kolaboratif.</p></article></div></div></section>
-<section id="akademik"><div class="wrap split"><div><h2>Status Akreditasi Program Studi</h2><p>Karena Arsitektur merupakan prodi baru, status harus menggunakan dokumen resmi yang berlaku.</p><p><span class="placeholder">Isi status, nomor SK, lembaga, dan masa berlaku</span></p></div><div class="photo">Tempat sertifikat atau dokumen resmi</div></div></section>
-<section class="soft" id="sambutan"><div class="wrap split"><div class="photo">Foto Koordinator Program Studi</div><div><h2>Sambutan Koordinator Program Studi</h2><p>Bagian ini diisi dengan sambutan resmi, gambaran singkat tujuan pembentukan prodi, dan harapan bagi mahasiswa serta mitra.</p><p><span class="placeholder">Isi nama lengkap, gelar, dan sambutan resmi</span></p></div></div></section>
-<section><div class="wrap stats"><div><strong>0+</strong>Mahasiswa Aktif</div><div><strong>0+</strong>Dosen Pengampu</div><div><strong>0+</strong>Mata Kuliah</div><div><strong>0+</strong>Mitra Kolaborasi</div></div></section>
-<section class="soft" id="berita"><div class="wrap"><h2>Berita Terbaru</h2><p class="lead">Kegiatan studio, workshop, kuliah umum, kerja sama, prestasi, dan pameran dapat ditampilkan pada bagian ini.</p><div class="cards"><article class="card"><h3>Contoh Judul Berita Program Studi</h3><p>Tanggal publikasi · Ringkasan berita singkat.</p></article><article class="card"><h3>Workshop dan Kegiatan Studio</h3><p>Tanggal publikasi · Ringkasan kegiatan.</p></article><article class="card"><h3>Pameran Karya Mahasiswa</h3><p>Tanggal publikasi · Dokumentasi karya.</p></article></div></div></section>
-<section id="pengumuman"><div class="wrap split"><div><h2>Pengumuman</h2><p>Informasi akademik, agenda kegiatan, dan dokumen penting mahasiswa.</p></div><div class="card"><h3>Contoh Pengumuman</h3><p>Jadwal kegiatan studio · Kuliah umum · Panduan portofolio</p></div></div></section>
-<section class="soft" id="fasilitas"><div class="wrap"><h2>Fasilitas, Karya, dan Partnership</h2><p class="lead">Tambahkan foto studio arsitektur, laboratorium desain, ruang pamer, karya mahasiswa, serta mitra yang memiliki izin publikasi.</p><div class="cards"><div class="photo">Foto Studio Arsitektur</div><div class="photo">Foto Karya Mahasiswa</div><div class="photo">Logo Mitra Kerja Sama</div></div></div></section>
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="hero-kicker">Program Studi S1 · FTTK UMRAH</span>
+      <h1>Merancang Ruang.<br>Membangun Masa Depan.</h1>
+      <p>Program Studi Arsitektur Universitas Maritim Raja Ali Haji hadir untuk mengembangkan calon arsitek yang peka terhadap ruang, budaya, lingkungan, dan karakter wilayah kepulauan.</p>
+      <div class="hero-actions">
+        <a class="btn" href="pages/profil-program-studi.html">Kenali Program Studi →</a>
+        <a class="btn btn-outline" href="pages/kurikulum.html">Lihat Kurikulum</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container quick-wrap">
+    <div class="quick-links">
+      <a class="quick-link" href="pages/profil-program-studi.html"><strong>Profil Program Studi</strong><span>Kenali Arsitektur UMRAH</span></a>
+      <a class="quick-link" href="pages/kurikulum.html"><strong>Kurikulum</strong><span>Struktur pembelajaran</span></a>
+      <a class="quick-link" href="pages/fasilitas.html"><strong>Studio Arsitektur</strong><span>Fasilitas pembelajaran</span></a>
+      <a class="quick-link" href="pages/berita.html"><strong>Berita Terbaru</strong><span>Kegiatan dan informasi</span></a>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container grid-2">
+      <div>
+        <span class="eyebrow">Penerimaan Mahasiswa Baru</span>
+        <h2 class="section-title">Informasi PMB Arsitektur UMRAH</h2>
+        <p class="section-subtitle">Bagian ini mengikuti pola informasi penerimaan mahasiswa baru pada website Teknik Informatika. Data kuota dan jadwal harus diganti menggunakan data resmi terbaru.</p>
+        <div class="notice">Seluruh angka pada kartu PMB masih berupa placeholder. Jangan dipublikasikan sebelum diverifikasi oleh pihak program studi.</div>
+      </div>
+      <div class="pmb-card">
+        <h3>Daya Tampung Mahasiswa Baru</h3>
+        <p>Jalur seleksi dapat disesuaikan dengan pengumuman resmi UMRAH.</p>
+        <div class="pmb-grid">
+          <div class="pmb-stat"><strong>00</strong><span>Total mahasiswa</span></div>
+          <div class="pmb-stat"><strong>00</strong><span>SNBP & SNBT</span></div>
+          <div class="pmb-stat"><strong>00</strong><span>Seleksi mandiri</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <span class="eyebrow">Tentang Kami</span>
+      <h2 class="section-title">Program Studi Arsitektur UMRAH</h2>
+      <p class="section-subtitle">Prodi baru membutuhkan identitas yang jelas. Beranda sebaiknya menjelaskan keunggulan utama, konteks wilayah kepulauan, pendekatan desain, serta alasan calon mahasiswa memilih Arsitektur UMRAH.</p>
+      <div class="grid-3">
+        <article class="card"><div class="card-body"><div class="icon-box">⌂</div><h3>Studio Berbasis Proyek</h3><p>Pembelajaran arsitektur menekankan proses eksplorasi gagasan, perancangan, visualisasi, dan presentasi karya.</p></div></article>
+        <article class="card"><div class="card-body"><div class="icon-box">≈</div><h3>Konteks Kepulauan</h3><p>Posisi UMRAH di Kepulauan Riau dapat menjadi karakter khas dalam pengembangan desain responsif terhadap lingkungan maritim.</p></div></article>
+        <article class="card"><div class="card-body"><div class="icon-box">✦</div><h3>Karya Mahasiswa</h3><p>Website dapat menjadi etalase tugas studio, maket, poster, pameran, dan proyek kolaboratif mahasiswa.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section accreditation">
+    <div class="container accreditation-box">
+      <div>
+        <span class="badge">Informasi Akreditasi</span>
+        <h2>Status Akreditasi Program Studi</h2>
+        <p>Karena Arsitektur merupakan program studi baru, bagian ini harus menampilkan status yang benar sesuai dokumen resmi. Hindari mencantumkan peringkat akreditasi tanpa dasar.</p>
+        <p><span class="placeholder">Isi status, nomor SK, lembaga akreditasi, dan masa berlaku</span></p>
+        <a class="btn btn-light" href="pages/unduh.html">Lihat Dokumen Pendukung</a>
+      </div>
+      <div class="cert-placeholder">Tempat sertifikat atau dokumen resmi akreditasi</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container coordinator">
+      <div class="photo-placeholder">Foto Koordinator<br>Program Studi</div>
+      <div>
+        <span class="eyebrow">Sekapur Sirih</span>
+        <h2 class="section-title">Sambutan Koordinator Program Studi Arsitektur</h2>
+        <p>Selamat datang di Program Studi Arsitektur FTTK UMRAH. Bagian ini diisi dengan sambutan resmi koordinator program studi, gambaran singkat tujuan pembentukan prodi, serta harapan bagi mahasiswa dan mitra.</p>
+        <p class="placeholder">Isi nama lengkap, gelar, foto, serta sambutan resmi koordinator program studi.</p>
+        <a class="btn btn-light" href="pages/profil-program-studi.html#sambutan">Baca Selengkapnya</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats section">
+    <div class="container grid-4">
+      <div class="stat"><strong>0+</strong><span>Mahasiswa Aktif</span></div>
+      <div class="stat"><strong>0+</strong><span>Dosen Pengampu</span></div>
+      <div class="stat"><strong>0+</strong><span>Mata Kuliah</span></div>
+      <div class="stat"><strong>0+</strong><span>Mitra Kolaborasi</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Informasi Terkini</span>
+      <h2 class="section-title">Berita Terbaru</h2>
+      <p class="section-subtitle">Gunakan bagian ini untuk menampilkan kegiatan studio, workshop, kuliah umum, prestasi, kerja sama, serta dokumentasi program studi.</p>
+      <div class="grid-3">
+        <article class="card news-card"><div class="thumb">Foto Berita 01</div><div class="card-body"><div class="meta"><span>Berita</span><span>•</span><span>Tanggal publikasi</span></div><h3>Contoh Judul Berita Program Studi Arsitektur</h3><p>Ringkasan berita singkat maksimal dua atau tiga kalimat.</p></div></article>
+        <article class="card news-card"><div class="thumb">Foto Berita 02</div><div class="card-body"><div class="meta"><span>Kegiatan</span><span>•</span><span>Tanggal publikasi</span></div><h3>Workshop dan Kegiatan Studio Mahasiswa</h3><p>Ringkasan kegiatan, peserta, pemateri, dan manfaat kegiatan.</p></div></article>
+        <article class="card news-card"><div class="thumb">Foto Berita 03</div><div class="card-body"><div class="meta"><span>Prestasi</span><span>•</span><span>Tanggal publikasi</span></div><h3>Pameran Karya Mahasiswa Arsitektur</h3><p>Gunakan dokumentasi visual yang menarik dan sudah mendapat izin publikasi.</p></div></article>
+      </div>
+      <p style="margin-top:22px"><a class="btn btn-light" href="pages/berita.html">Indeks Artikel Berita →</a></p>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container grid-2">
+      <div>
+        <span class="eyebrow">Pengumuman</span>
+        <h2 class="section-title">Agenda Kegiatan & Informasi Akademik</h2>
+        <div class="list">
+          <div class="list-item"><strong>Contoh: Pengumuman Jadwal Kegiatan Studio</strong><span>Tanggal publikasi · Admin Arsitektur UMRAH</span></div>
+          <div class="list-item"><strong>Contoh: Informasi Kuliah Umum Arsitektur</strong><span>Tanggal publikasi · Admin Arsitektur UMRAH</span></div>
+          <div class="list-item"><strong>Contoh: Panduan Pengumpulan Portofolio</strong><span>Tanggal publikasi · Admin Arsitektur UMRAH</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Etalase Karya</span>
+        <h2 class="section-title">Karya Mahasiswa</h2>
+        <div class="card"><div class="thumb" style="aspect-ratio:4/3">Tempat foto maket, poster, atau hasil studio</div><div class="card-body"><h3>Galeri Studio Arsitektur</h3><p>Bagian khas Arsitektur yang tidak tersedia pada prodi lain. Gunakan untuk menunjukkan kualitas proses belajar secara visual.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Kolaborasi</span>
+      <h2 class="section-title">Partnership</h2>
+      <p class="section-subtitle">Masukkan logo mitra setelah ada izin publikasi dan dokumen kerja sama yang sesuai.</p>
+      <div class="partner-grid">
+        <div class="partner">Mitra 01</div><div class="partner">Mitra 02</div><div class="partner">Mitra 03</div><div class="partner">Mitra 04</div><div class="partner">Mitra 05</div>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="footer" id="footer"><div class="wrap"><div class="footer-grid"><div><h3>Program Studi Arsitektur UMRAH</h3><p>FTTK · Universitas Maritim Raja Ali Haji</p><p><span class="placeholder">Isi alamat dan kontak resmi prodi</span></p></div><div><h3>Akademik</h3><a href="#akademik">Kurikulum</a><a href="#akademik">CPL</a><a href="#pengumuman">Unduh Berkas</a></div><div><h3>Kontak</h3><a href="#">Email resmi</a><a href="#">Instagram resmi</a><a href="#">Senggarang, Tanjungpinang</a></div></div><div class="copy">Prototype Website Program Studi Arsitektur UMRAH · <span id="year"></span></div></div></footer>
-<script>const t=document.querySelector('.toggle'),m=document.querySelector('.menu');t.onclick=()=>m.classList.toggle('open');document.getElementById('year').textContent=new Date().getFullYear()</script>
-</body></html>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Program Studi Arsitektur UMRAH</h3>
+        <p>Fakultas Teknik dan Teknologi Kemaritiman, Universitas Maritim Raja Ali Haji.</p>
+        <p><span class="placeholder">Isi deskripsi singkat dan alamat resmi prodi</span></p>
+      </div>
+      <div>
+        <h3>Tentang Arsitektur</h3>
+        <a href="pages/profil-program-studi.html">Profil Program Studi</a>
+        <a href="pages/visi-misi.html">Visi & Misi</a>
+        <a href="pages/dosen.html">Dosen</a>
+      </div>
+      <div>
+        <h3>Akademik</h3>
+        <a href="pages/kurikulum.html">Kurikulum</a>
+        <a href="pages/kurikulum.html#cpl">CPL</a>
+        <a href="pages/unduh.html">Unduh Berkas</a>
+      </div>
+      <div>
+        <h3>Kontak</h3>
+        <a href="#">Email: <span class="placeholder">email resmi</span></a>
+        <a href="#">Instagram: <span class="placeholder">@akunresmi</span></a>
+        <a href="#">Lokasi: Senggarang, Tanjungpinang</a>
+      </div>
+    </div>
+    <div class="footer-bottom">Copyright © <span data-year></span> Universitas Maritim Raja Ali Haji. Prototype website Program Studi Arsitektur.</div>
+  </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
